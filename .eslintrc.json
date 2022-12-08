@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "ecmaFeatures": {
+    "modules": true,
+    "spread" : true,
+    "restParams" : true
+  },
+  "env" : {
+    "browser" : true,
+    "node" : true,
+    "es6" : true
+  },
+  "rules" : {
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "no-unused-vars" : 2,
+    "no-undef" : 2
+  },
+  "ignorePatterns": ["**/plugins/*.js"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2021
+  }
+}
