@@ -60,7 +60,7 @@ class Header extends Component {
                             <div className="container clearfix">
 
                                 <div className="logo-header mostion">
-                                    <Link to={"/"}><img src={logo2} className="logo" alt="img"/></Link>
+                                    <Link to={import.meta.env.BASE_URL}><img src={logo2} className="logo" alt="img"/></Link>
                                 </div>
 
                                 <button className="navbar-toggler collapsed navicon  justify-content-end" type="button"
@@ -80,17 +80,17 @@ class Header extends Component {
                                 <div className="header-nav navbar-collapse collapse myNavbar justify-content-start"
                                      id="navbarNavDropdown">
                                     <div className="logo-header mostion d-md-block d-lg-none">
-                                        <Link to={'/'} className="dez-page"><img src={logo2} alt=""/></Link>
+                                        <Link to={import.meta.env.BASE_URL} className="dez-page"><img src={logo2} alt=""/></Link>
                                     </div>
                                     <ul className="nav navbar-nav">
                                         <li className="">
-                                            <Link  to={"./"}>Home</Link>
+                                            <Link  to={import.meta.env.BASE_URL}>Home</Link>
                                         </li>
                                         <li>
-                                            <Link to={"/profil"}>Profil</Link>
+                                            <Link to={import.meta.env.BASE_URL + "profil"}>Profil</Link>
                                         </li>
                                         <li>
-                                            <Link to={'/ik-profil'}>İK</Link>
+                                            <Link to={import.meta.env.BASE_URL + 'ik-profil'}>İK</Link>
                                         </li>
                                     </ul>
                                 </div>
