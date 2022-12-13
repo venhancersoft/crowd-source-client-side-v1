@@ -34,7 +34,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy":  "yarn build && gh-pages -d dist"
   },
   "browserslist": {
     "production": [
@@ -52,6 +53,7 @@
     "@vitejs/plugin-react": "^1.3.2",
     "eslint": "7.0.0",
     "eslint-plugin-react": "^7.31.10",
-    "vite": "2.9.15"
+    "vite": "2.9.15",
+    "gh-pages": "^4.0.0"
   }
 }
