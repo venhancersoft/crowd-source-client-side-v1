@@ -74,70 +74,70 @@ const Markup = () => {
         <>
             <div className="page-wraper">
                 <Switch>
-                    <Route path='/' exact component={HomePage}/>
-                    <Route path='/home2' exact component={Homepage2}/>
-                    <Route path='/home3' exact component={Homepage3}/>
+                    <Route path={import.meta.env.BASE_URL + '/'} exact component={HomePage}/>
+                    <Route path={import.meta.env.BASE_URL + '/home2'} exact component={Homepage2}/>
+                    <Route path={import.meta.env.BASE_URL + '/home3'} exact component={Homepage3}/>
 
-                    <Route path='/profil' exact component={CrowdProfil}/>
-                    <Route path='/ozgecmis' exact component={CrowdOzgecmisim}/>
-                    <Route path='/mulakat' exact component={CrowdMulakat}/>
-                    <Route path='/teklif-verdiklerim' exact component={CrowdTeklifVerdiklerim}/>
-                    <Route path='/banka-bilgilerim' exact component={CrowdBankaBilgilerim}/>
-                    <Route path='/kaydettigim-isler' exact component={CrowdKaydettiImIsler}/>
-                    <Route path='/is-alarmlari' exact component={CrowdIsAlarmlar}/>
-                    <Route path='/ayarlar' exact component={CrowdAyarlar}/>
-
-
-                    <Route path='/ik-profil' exact component={CrowdIkProfil}/>
-                    <Route path='/ik-cv' exact component={CrowdIkResume}/>
-                    <Route path='/ik-is-yayinlama' exact component={CrowdIkIsYayinlama}/>
-                    <Route path='/ik-teklifte-bulunanlar' exact component={CrowdIkIsTeklifteBulunanlar}/>
-                    <Route path='/ik-aday-puanlama' exact component={CrowdIkAdayPuanlama}/>
-                    <Route path='/ik-aday-onerme' exact component={CrowdIkIsAdayOnerme}/>
+                    <Route path={import.meta.env.BASE_URL + '/profil'} exact component={CrowdProfil}/>
+                    <Route path={import.meta.env.BASE_URL + '/ozgecmis'} exact component={CrowdOzgecmisim}/>
+                    <Route path={import.meta.env.BASE_URL + '/mulakat'} exact component={CrowdMulakat}/>
+                    <Route path={import.meta.env.BASE_URL + '/teklif-verdiklerim'} exact component={CrowdTeklifVerdiklerim}/>
+                    <Route path={import.meta.env.BASE_URL + '/banka-bilgilerim'} exact component={CrowdBankaBilgilerim}/>
+                    <Route path={import.meta.env.BASE_URL + '/kaydettigim-isler'} exact component={CrowdKaydettiImIsler}/>
+                    <Route path={import.meta.env.BASE_URL + '/is-alarmlari'} exact component={CrowdIsAlarmlar}/>
+                    <Route path={import.meta.env.BASE_URL + '/ayarlar'} exact component={CrowdAyarlar}/>
 
 
-                    <Route path='/jobs-my-resume' exact component={Jobmyresume}/>
-                    <Route path='/jobs-applied-job' exact component={Jobsappliedjob}/>
-                    <Route path='/jobs-alerts' exact component={Jobsalert}/>
-                    <Route path='/jobs-saved-jobs' exact component={Jobsavedjobs}/>
-                    <Route path='/jobs-cv-manager' exact component={Jobcvmanager}/>
-                    <Route path='/jobs-change-password' exact component={Changepasswordpage}/>
+                    <Route path={import.meta.env.BASE_URL + '/ik-profil'} exact component={CrowdIkProfil}/>
+                    <Route path={import.meta.env.BASE_URL + '/ik-cv'} exact component={CrowdIkResume}/>
+                    <Route path={import.meta.env.BASE_URL + '/ik-is-yayinlama'} exact component={CrowdIkIsYayinlama}/>
+                    <Route path={import.meta.env.BASE_URL + '/ik-teklifte-bulunanlar'} exact component={CrowdIkIsTeklifteBulunanlar}/>
+                    <Route path={import.meta.env.BASE_URL + '/ik-aday-puanlama'} exact component={CrowdIkAdayPuanlama}/>
+                    <Route path={import.meta.env.BASE_URL + '/ik-aday-onerme'} exact component={CrowdIkIsAdayOnerme}/>
 
-                    <Route path='/company-profile' exact component={Companyprofile}/>
-                    <Route path='/company-resume' exact component={Companyresume}/>
-                    <Route path='/company-post-jobs' exact component={Componypostjobs}/>
-                    <Route path='/company-manage-job' exact component={Companymanage}/>
-                    <Route path='/company-transactions' exact component={Companytransactions}/>
-                    <Route path='/browse-candidates' exact component={Browsecandidates}/>
 
-                    <Route path='/about-us' exact component={Aboutus}/>
-                    <Route path='/job-detail' exact component={Jobdetail}/>
-                    <Route path='/companies' exact component={Companies}/>
-                    <Route path='/free-job-alerts' exact component={Freejobalerts}/>
-                    <Route path='/browse-job-list' exact component={Browsejoblist}/>
-                    <Route path='/browse-job-grid' exact component={Browsejobgrid}/>
-                    <Route path='/browse-job-filter-list' exact component={Browsejobfilterlist}/>
-                    <Route path='/browse-job-filter-grid' exact component={Browsejobfiltergrid}/>
+                    <Route path={import.meta.env.BASE_URL + '/jobs-my-resume'} exact component={Jobmyresume}/>
+                    <Route path={import.meta.env.BASE_URL + '/jobs-applied-job'} exact component={Jobsappliedjob}/>
+                    <Route path={import.meta.env.BASE_URL + '/jobs-alerts'} exact component={Jobsalert}/>
+                    <Route path={import.meta.env.BASE_URL + '/jobs-saved-jobs'} exact component={Jobsavedjobs}/>
+                    <Route path={import.meta.env.BASE_URL + '/jobs-cv-manager'} exact component={Jobcvmanager}/>
+                    <Route path={import.meta.env.BASE_URL + '/jobs-change-password'} exact component={Changepasswordpage}/>
 
-                    <Route path='/category-all-jobs' exact component={Categoryalljob}/>
-                    <Route path='/category-company-jobs' exact component={Categorycompanyjob}/>
-                    <Route path='/category-designations-jobs' exact component={Categorydesignationsjob}/>
-                    <Route path='/category-jobs' exact component={Categoryjobs}/>
-                    <Route path='/category-location-jobs' exact component={Categorylocationjobs}/>
-                    <Route path='/category-skill-jobs' exact component={Categoryskilljobs}/>
-                    <Route path='/portfolio-grid-2' exact component={Portfoliogrid2}/>
+                    <Route path={import.meta.env.BASE_URL + '/company-profile'} exact component={Companyprofile}/>
+                    <Route path={import.meta.env.BASE_URL + '/company-resume'} exact component={Companyresume}/>
+                    <Route path={import.meta.env.BASE_URL + '/company-post-jobs'} exact component={Componypostjobs}/>
+                    <Route path={import.meta.env.BASE_URL + '/company-manage-job'} exact component={Companymanage}/>
+                    <Route path={import.meta.env.BASE_URL + '/company-transactions'} exact component={Companytransactions}/>
+                    <Route path={import.meta.env.BASE_URL + '/browse-candidates'} exact component={Browsecandidates}/>
 
-                    <Route path='/login' exact component={Loginpage1}/>
-                    <Route path='/register' exact component={Register1}/>
+                    <Route path={import.meta.env.BASE_URL + '/about-us'} exact component={Aboutus}/>
+                    <Route path={import.meta.env.BASE_URL + '/job-detail'} exact component={Jobdetail}/>
+                    <Route path={import.meta.env.BASE_URL + '/companies'} exact component={Companies}/>
+                    <Route path={import.meta.env.BASE_URL + '/free-job-alerts'} exact component={Freejobalerts}/>
+                    <Route path={import.meta.env.BASE_URL + '/browse-job-list'} exact component={Browsejoblist}/>
+                    <Route path={import.meta.env.BASE_URL + '/browse-job-grid'} exact component={Browsejobgrid}/>
+                    <Route path={import.meta.env.BASE_URL + '/browse-job-filter-list'} exact component={Browsejobfilterlist}/>
+                    <Route path={import.meta.env.BASE_URL + '/browse-job-filter-grid'} exact component={Browsejobfiltergrid}/>
 
-                    <Route path='/contact' exact component={Contact}/>
-                    <Route path='/blog-classic' exact component={Blogclassic}/>
-                    <Route path='/blog-classic-sidebar' exact component={Blogclassicsidebar}/>
-                    <Route path='/blog-detailed-grid' exact component={Blogdetailgrid}/>
-                    <Route path='/blog-detailed-grid-sidebar' exact component={Blogdetailgridsidebar}/>
-                    <Route path='/blog-left-img' exact component={Blogleftimg}/>
-                    <Route path='/blog-details' exact component={Blogdetail}/>
-                    <Route path='/*' exact component={Error404}/>
+                    <Route path={import.meta.env.BASE_URL + '/category-all-jobs'} exact component={Categoryalljob}/>
+                    <Route path={import.meta.env.BASE_URL + '/category-company-jobs'} exact component={Categorycompanyjob}/>
+                    <Route path={import.meta.env.BASE_URL + '/category-designations-jobs'} exact component={Categorydesignationsjob}/>
+                    <Route path={import.meta.env.BASE_URL + '/category-jobs'} exact component={Categoryjobs}/>
+                    <Route path={import.meta.env.BASE_URL + '/category-location-jobs'} exact component={Categorylocationjobs}/>
+                    <Route path={import.meta.env.BASE_URL + '/category-skill-jobs'} exact component={Categoryskilljobs}/>
+                    <Route path={import.meta.env.BASE_URL + '/portfolio-grid-2'} exact component={Portfoliogrid2}/>
+
+                    <Route path={import.meta.env.BASE_URL + '/login'} exact component={Loginpage1}/>
+                    <Route path={import.meta.env.BASE_URL + '/register'} exact component={Register1}/>
+
+                    <Route path={import.meta.env.BASE_URL + '/contact'} exact component={Contact}/>
+                    <Route path={import.meta.env.BASE_URL + '/blog-classic'} exact component={Blogclassic}/>
+                    <Route path={import.meta.env.BASE_URL + '/blog-classic-sidebar'} exact component={Blogclassicsidebar}/>
+                    <Route path={import.meta.env.BASE_URL + '/blog-detailed-grid'} exact component={Blogdetailgrid}/>
+                    <Route path={import.meta.env.BASE_URL + '/blog-detailed-grid-sidebar'} exact component={Blogdetailgridsidebar}/>
+                    <Route path={import.meta.env.BASE_URL + '/blog-left-img'} exact component={Blogleftimg}/>
+                    <Route path={import.meta.env.BASE_URL + '/blog-details'} exact component={Blogdetail}/>
+                    <Route path={import.meta.env.BASE_URL + '/*'} exact component={Error404}/>
                 </Switch>
             </div>
             <ScrollToTop/>

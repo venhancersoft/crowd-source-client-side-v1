@@ -24,8 +24,8 @@ function App(props) {
 
     let routes = (
         <Switch>
-            <Route path='/login' component={Login}/>
-            <Route path='/register' component={SignUp}/>
+            <Route path={import.meta.env.BASE_URL + '/login'} component={Login}/>
+            <Route path={import.meta.env.BASE_URL + '/register'} component={SignUp}/>
         </Switch>
     );
     if (props.isAuthenticated) {

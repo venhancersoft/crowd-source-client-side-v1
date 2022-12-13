@@ -27,28 +27,28 @@ function Profilesidebar() {
                         </div>
                     </div>
                     <ul>
-                        <li><Link to={'/profil'} className={path==='/profil' ? 'active': null}>
+                        <li><Link to={import.meta.env.BASE_URL +'/profil'} className={path==='/profil' ? 'active': null}>
                             <i className="fa fa-user-o" aria-hidden="true"></i>
                             <span>Profil</span></Link></li>
-                        <li><Link to={'/ozgecmis'} className={path==='/ozgecmis' ? 'active': null}>
+                        <li><Link to={import.meta.env.BASE_URL +'/ozgecmis'} className={path==='/ozgecmis' ? 'active': null}>
                             <i className="fa fa-file-text-o" aria-hidden="true"></i>
                             <span>Özgeçmiş</span></Link></li>
-                        <li><Link to={'/mulakat'} className={path==='/mulakat' ? 'active': null}>
+                        <li><Link to={import.meta.env.BASE_URL +'/mulakat'} className={path==='/mulakat' ? 'active': null}>
                             <i className="fa fa-heart-o" aria-hidden="true"></i>
                             <span>Mülakat</span></Link></li>
-                        <li><Link to={'/teklif-verdiklerim'} className={path==='/teklif-verdiklerim' ? 'active': null}>
+                        <li><Link to={import.meta.env.BASE_URL +'/teklif-verdiklerim'} className={path==='/teklif-verdiklerim' ? 'active': null}>
                             <i className="fa fa-briefcase" aria-hidden="true"></i>
                             <span>Teklif Verdiklerim</span></Link></li>
-                        <li><Link to={'/banka-bilgilerim'} className={path==='/banka-bilgilerim' ? 'active': null}>
+                        <li><Link to={import.meta.env.BASE_URL +'/banka-bilgilerim'} className={path==='/banka-bilgilerim' ? 'active': null}>
                             <i className="fa fa-bell-o" aria-hidden="true"></i>
                             <span>Banka Bilgilerim</span></Link></li>
-                        <li><Link to={'/kaydettigim-isler'} className={path==='/kaydettigim-isler' ? 'active': null}>
+                        <li><Link to={import.meta.env.BASE_URL +'/kaydettigim-isler'} className={path==='/kaydettigim-isler' ? 'active': null}>
                             <i className="fa fa-id-card-o" aria-hidden="true"></i>
                             <span>Kaydettiğim İşler</span></Link></li>
-                        <li><Link to={'/is-alarmlari'} className={path==='/is-alarmları' ? 'active': null}>
+                        <li><Link to={import.meta.env.BASE_URL +'/is-alarmlari'} className={path==='/is-alarmları' ? 'active': null}>
                             <i className="fa fa-key" aria-hidden="true"></i>
                             <span>İş Alarmları</span></Link></li>
-                        <li><Link to={'/ayarlar'} className={path==='/ayarlar' ? 'active': null}>
+                        <li><Link to={import.meta.env.BASE_URL +'/ayarlar'} className={path==='/ayarlar' ? 'active': null}>
                             <i className="fa fa-sign-out" aria-hidden="true"></i>
                             <span>Ayarlar</span></Link>
                         </li>
