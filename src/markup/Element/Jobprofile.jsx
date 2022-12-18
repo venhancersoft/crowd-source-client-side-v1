@@ -1,5 +1,5 @@
 import React from 'react';
-import pic1 from '@/images/team/pic1.jpg';
+import pic1 from '@/images/team/gencay.jpg';
 
 function Jobprofile() {
     return (

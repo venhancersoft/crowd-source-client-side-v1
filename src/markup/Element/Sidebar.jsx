@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {SRLWrapper} from 'simple-react-lightbox';
 import pic1 from '@/images/blog/recent-blog/pic1.jpg'
 import pic2 from '@/images/blog/recent-blog/pic2.jpg'
 import pic3 from '@/images/blog/recent-blog/pic3.jpg'
@@ -45,7 +44,6 @@ function Sidebar() {
             <div className="widget">
                 <h6 className="widget-title style-1">Search</h6>
                 <div className="search-bx style-1">
-                    <form role="search" method="post">
                         <div className="input-group">
                             <input name="text" className="form-control" placeholder="Enter your keywords..."
                                    type="text"/>
@@ -53,7 +51,7 @@ function Sidebar() {
 								<button type="submit" className="fa fa-search text-primary"></button>
 							</span>
                         </div>
-                    </form>
+                    
                 </div>
             </div>
             <div className="widget recent-posts-entry">
@@ -82,7 +80,7 @@ function Sidebar() {
             </div>
             <div className="widget widget_gallery gallery-grid-3">
                 <h6 className="widget-title style-1">Our services</h6>
-                <SRLWrapper options={options}>
+                <div>
                     <ul>
                         {dzPost.map((item, index) => (
                             <li key={index}>
@@ -95,7 +93,7 @@ function Sidebar() {
                         ))}
 
                     </ul>
-                </SRLWrapper>
+                </div>
             </div>
             <div className="widget widget_archive">
                 <h6 className="widget-title style-1">Categories List</h6>
@@ -111,7 +109,6 @@ function Sidebar() {
                 <h6 className="widget-title style-1">Newsletter</h6>
                 <div className="news-box">
                     <p>Enter your e-mail and subscribe to our newsletter.</p>
-                    <form className="dzSubscribe" action="script/mailchamp.php" method="post">
                         <div className="dzSubscribeMsg"></div>
                         <div className="input-group">
                             <input name="dzEmail" required="required" type="email" className="form-control"
@@ -120,7 +117,7 @@ function Sidebar() {
                                     className="site-button btn-block">Subscribe Now
                             </button>
                         </div>
-                    </form>
+                    
                 </div>
             </div>
         </aside>

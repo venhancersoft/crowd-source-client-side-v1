@@ -1,6 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import logoWhite from '@/images/logo-white.png'
 
 function Footer() {
     return <></>;
@@ -26,7 +24,7 @@ function Footer() {
     //                                                     className="site-button radius-xl">Subscribe</button>
 	// 										</span>
     //                                     </div>
-    //                                 </form>
+    //                                 
     //                             </div>
     //                             <ul className="list-inline m-a0">
     //                                 <li><Link to={''} className="site-button white facebook circle "><i

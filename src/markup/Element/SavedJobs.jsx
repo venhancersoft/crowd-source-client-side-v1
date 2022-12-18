@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Modal} from 'react-bootstrap';
-import swal from 'sweetalert';
 import {nanoid} from 'nanoid';
 import icon2 from '@/images/logo/icon2.png'
 
@@ -76,11 +75,11 @@ const SavedJobs = () => {
             const newContacts = [...contacts, newContact];
             setContacts(newContacts);
             setPostModal(false);
-            swal('Good job!', 'Successfully Added', 'success');
+            // swal('Good job!', 'Successfully Added', 'success');
             addFormData.title = addFormData.company = addFormData.date = '';
 
         } else {
-            swal('Oops', errorMsg, 'error');
+            // swal('Oops', errorMsg, 'error');
         }
     };
 
@@ -222,7 +221,7 @@ const SavedJobs = () => {
             <Modal className="modal modal-bx-info fade" show={postModal} onHide={setPostModal}>
                 <div className="">
                     <div className="">
-                        <form>
+                        
                             <div className="modal-header">
                                 <h4 className="modal-title fs-20">Add Task</h4>
                                 <button type="button" className="close" onClick={() => setPostModal(false)}>
@@ -290,7 +289,7 @@ const SavedJobs = () => {
                                     className="flaticon-delete-1"></i> Discard
                                 </button>
                             </div>
-                        </form>
+                        
 
                     </div>
                 </div>
@@ -298,7 +297,7 @@ const SavedJobs = () => {
             <Modal className="modal modal-bx-info" show={editModal} onHide={setEditModal}>
                 <div className="">
                     <div className="">
-                        <form>
+                        
                             <div className="modal-header">
                                 <h4 className="modal-title fs-20">Edit Task</h4>
                                 <button type="button" className="close" onClick={() => setEditModal(false)}>
@@ -351,7 +350,7 @@ const SavedJobs = () => {
                                     <i className="flaticon-delete-1"></i> Discard
                                 </button>
                             </div>
-                        </form>
+                        
 
                     </div>
                 </div>

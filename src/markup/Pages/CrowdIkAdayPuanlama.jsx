@@ -1,39 +1,27 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import Header2 from '@/markup/Layout/Header';
-import Footer from '@/markup/Layout/Footer';
-import {Form} from 'react-bootstrap';
-import GoogleMaps from 'simple-react-google-maps';
+import AuthLayout from '@/markup/Layout/AuthLayout';
+import Rate from '@/markup/Element/Rate';
+import {Col, Row} from 'react-bootstrap';
 
-import icon3 from '@/images/logo/icon3.jpg'
-import ProfileIKSidebar from '@/markup/Element/ProfileIKSidebar';
 
-function Companyprofile() {
+function CrowdIkAdayPuanlama() {
     return (
-        <>
-            <Header2/>
-            <div className="page-content bg-white">
-                <div className="content-block">
-                    <div className="section-full bg-white p-t50 p-b20">
-                        <div className="container">
-                            <div className="row">
-                                <ProfileIKSidebar />
-                                <div className="col-xl-9 col-lg-8 m-b30">
-                                    <div className="job-bx submit-resume">
-                                        <div className="job-bx-title clearfix">
-                                            <h4 className="font-weight-700 pull-left text-uppercase">Aday Puanlama</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <Footer/>
-        </>
+        <AuthLayout>
+            <h3>Puanlama</h3>
+            <Row>
+                <Col style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}><h5>İletişimde nezaket</h5></Col>
+                <Col><Rate /></Col>
+            </Row>
+            <Row>
+                <Col style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}><h5>İş Disiplini</h5></Col>
+                <Col><Rate /></Col>
+            </Row>
+            <Row>
+                <Col style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}><h5>İşin tamamlanması</h5></Col>
+                <Col><Rate /></Col>
+            </Row>
+        </AuthLayout>
     )
 }
 
-export default Companyprofile;
+export default CrowdIkAdayPuanlama;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Slider from 'react-slick';
+
 import pic1 from '@/images/testimonials/pic1.jpg'
 import pic2 from '@/images/testimonials/pic2.jpg'
 import pic3 from '@/images/testimonials/pic3.jpg'
@@ -42,7 +42,7 @@ class owltestimonial extends Component {
         };
         return (
 
-            <Slider className="blog-carousel-center owl-carousel owl-none " {...settings}>
+            <div className="blog-carousel-center owl-carousel owl-none " {...settings}>
                 {postBlog.map((item, index) => (
                     <div className="item p-3" key={index}>
                         <div className="testimonial-5">
@@ -61,7 +61,7 @@ class owltestimonial extends Component {
                     </div>
                 ))}
 
-            </Slider>
+            </div>
 
 
         )

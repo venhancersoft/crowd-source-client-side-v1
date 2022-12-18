@@ -1,34 +1,25 @@
-import React, {Suspense, useEffect} from 'react';
+import React, {Suspense} from 'react';
 import Index from '@/markup/Markup';
-import {connect, useDispatch} from 'react-redux';
-import {Route, Switch, withRouter} from 'react-router-dom';
-import {checkAutoLogin} from '@/services/AuthService';
-import {isAuthenticated} from '@/store/selectors/AuthSelectors';
+import {Route, Switch} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import './css/plugins.css';
 import './css/style.css';
 import './css/templete.css';
 import './css/skin/skin-1.css';
 import './plugins/slick/slick.min.css';
 import './plugins/slick/slick-theme.min.css';
+import './css/new-template.css';
+
+import CrowdRegister from '@/markup/Pages/CrowdRegister';
+import {useStore} from '@/store/store';
+import CrowdLogin from '@/markup/Pages/CrowdLogin';
+import CrowdHomePage from '@/markup/Pages/CrowdHomePage';
+import CrowdLandingPage from '@/markup/Pages/CrowdLandingPage';
 
 
-import Login from '@/markup/Pages/Loginpage1';
-import SignUp from '@/markup/Pages/Register1';
-
-
-function App(props) {
-    const dispatch = useDispatch();
-    // useEffect(() => {
-    //     checkAutoLogin(dispatch, props.history);
-    // }, [dispatch, props.history]);
-
-    let routes = (
-        <Switch>
-            <Route path={import.meta.env.BASE_URL + 'login'} component={Login}/>
-            <Route path={import.meta.env.BASE_URL + 'register'} component={SignUp}/>
-        </Switch>
-    );
-    if (props.isAuthenticated) {
+function App() {
+    const auth = useStore(state => state.auth);
+    if (auth) {
         return (
             <>
                 <Suspense fallback={
@@ -59,17 +50,15 @@ function App(props) {
                     </div>
                 }
                 >
-                    {routes}
+                    <Switch>
+                        <Route path={import.meta.env.BASE_URL} exact component={CrowdLandingPage} />
+                        <Route path={import.meta.env.BASE_URL + 'login'} exact component={CrowdLogin}/>
+                        <Route path={import.meta.env.BASE_URL + 'register'} exact component={CrowdRegister}/>
+                    </Switch>
                 </Suspense>
             </div>
         );
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        isAuthenticated: true//isAuthenticated(state),
-    };
-};
-
-export default withRouter(connect(mapStateToProps)(App));
+export default App

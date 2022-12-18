@@ -1,22 +1,10 @@
-import {applyMiddleware, combineReducers, compose, createStore,} from 'redux';
-import PostsReducer from './reducers/PostsReducer';
-import thunk from 'redux-thunk';
-import {AuthReducer} from './reducers/AuthReducer';
-import todoReducers from './reducers/Reducers';
-import {reducer as reduxFormReducer} from 'redux-form';
+import create from 'zustand'
+import {persist} from 'zustand/middleware';
 
-const middleware = applyMiddleware(thunk);
-
-const composeEnhancers =
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const reducers = combineReducers({
-    posts: PostsReducer,
-    auth: AuthReducer,
-    todoReducers,
-    form: reduxFormReducer,
-});
-
-//const store = createStore(rootReducers);
-
-export const store = createStore(reducers, composeEnhancers(middleware));
+export const useStore = create(persist(set => ({
+    auth: null,
+    setStoreState: (newState) => set((state) => ({...state, ...newState})),
+}),{
+    name: 'crowd-source',
+    getStorage: () => sessionStorage,
+}))

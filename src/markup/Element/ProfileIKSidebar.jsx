@@ -6,7 +6,6 @@ function Profilesidebar() {
     const router = useRouteMatch();
     const pathArr = router.path.split('/');
     const path = pathArr[pathArr.length - 1];
-    console.log(path);
     return (
         <div className="col-xl-3 col-lg-4 m-b30">
             <div className="sticky-top">
@@ -23,28 +22,34 @@ function Profilesidebar() {
                             </div>
                         </div>
                         <div className="candidate-title">
-                            <h4 className="m-b5"><Link to={import.meta.env.BASE_URL + '#'}>@COMPANY</Link></h4>
+                            <h4 className="m-b5"><Link to={import.meta.env.BASE_URL + '#'}>İşalım HR</Link></h4>
                         </div>
                     </div>
                     <ul>
-                        <li><Link to={import.meta.env.BASE_URL + 'ik-profil'} className={path === 'ik-profil' ? 'active' : null} >
-                            <i className="fa fa-user-o" aria-hidden="true"></i>
-                            <span>Profil</span></Link></li>
-                        <li><Link to={import.meta.env.BASE_URL + 'ik-cv'}  className={path === 'ik-cv' ? 'active' : null}>
-                            <i className="fa fa-file-text-o" aria-hidden="true"></i>
-                            <span>CVler</span></Link></li>
-                        <li><Link to={import.meta.env.BASE_URL + 'ik-is-yayinlama'}  className={path === 'ik-is-yayinlama' ? 'active' : null}>
-                            <i className="fa fa-random" aria-hidden="true"></i>
-                            <span>İş Yayınlama</span></Link></li>
-                        <li><Link to={import.meta.env.BASE_URL + 'ik-teklifte-bulunanlar'}  className={path === 'ik-teklifte-bulunanlar' ? 'active' : null}>
-                            <i className="fa fa-briefcase" aria-hidden="true"></i>
-                            <span>Teklifte Bulunanlar</span></Link></li>
-                        <li><Link to={import.meta.env.BASE_URL + 'ik-aday-puanlama'}  className={path === 'ik-aday-puanlama' ? 'active' : null}>
-                            <i className="fa fa-id-card-o" aria-hidden="true"></i>
-                            <span>Aday Puanlama</span></Link></li>
-                        <li><Link to={import.meta.env.BASE_URL + 'ik-aday-onerme'}  className={path === 'ik-aday-onerme' ? 'active' : null}>
-                            <i className="fa fa-id-card-o" aria-hidden="true"></i>
-                            <span>Aday Önerme</span></Link></li>
+                        <li>
+                            <Link to={import.meta.env.BASE_URL + 'ik-profil'} className={path === 'ik-profil' ? 'active' : null} >
+                                <i className="fa fa-user-o" aria-hidden="true"></i>
+                                <span>Profil</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={import.meta.env.BASE_URL + 'ik-is-yayinlama'}  className={path === 'ik-is-yayinlama' ? 'active' : null}>
+                                <i className="fa fa-random" aria-hidden="true"></i>
+                                <span>İlan Yayınlama</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={import.meta.env.BASE_URL + 'ik-tum-ilanlarim'}  className={path === 'ik-tum-ilanlarim' ? 'active' : null}>
+                                <i className="fa fa-random" aria-hidden="true"></i>
+                                <span>Tüm İlanlarım</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={import.meta.env.BASE_URL + 'ik-cv'}  className={path === 'ik-cv' ? 'active' : null}>
+                                <i className="fa fa-file-text-o" aria-hidden="true"></i>
+                                <span>Freelancerlar</span>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>

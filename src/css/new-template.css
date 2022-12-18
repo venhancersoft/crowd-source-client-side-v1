@@ -1,0 +1,384 @@
+:root{
+    --landing-yellow: #F1BA4C;
+}
+.landing{
+    background-color: #D4D4D4;
+    color: #FFFFFF;
+}
+.landing #top-section{
+    background: rgb(32,72,120);
+    background: radial-gradient(circle, rgba(32,72,120,1) 0%, rgba(37,47,87,1) 50%, rgba(18,18,60,1) 100%);
+    height: 100vh;
+    width: 100%;
+}
+.landing #top-section .header{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    color: var(--landing-yellow);
+    font-family: 'Poppins', sans-serif;
+    line-height: 23px;
+}
+.landing #top-section .header .right-header{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.landing #top-section .header .right-header div{
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+.landing #top-section .header .right-header div.get-started{
+    border: 1px solid var(--landing-yellow);
+    border-radius: 12px;
+    color: var(--landing-yellow);
+}
+.landing #top-section .header .left-header{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.landing #top-section #logo{
+    font-family: 'Ubuntu', sans-serif !important;
+    color: var(--landing-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.landing #top-section .menu-items{
+    display: flex;
+    gap: 55px;
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 64px;
+
+}
+
+.landing #top-section .menu-items div:hover{
+    background-color: rgb(39 67 100);
+}
+.landing #top-section .menu-items > div{
+    padding: 8px;
+}
+.landing #top-section .menu-items div:not(.selected){
+    color: rgba(255, 255, 255, 0.5);
+}
+.landing #top-section .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+}
+.landing #top-section .hero> div{
+    width: 50%;
+}
+.landing #top-section .hero .left-hero .left-hero-title{
+    color: white;
+    font-size: 60px;
+}
+.landing #top-section .hero .left-hero  .left-hero-title span{
+    background-color: var(--landing-yellow);
+    color:#252C53;
+    padding: 12px;
+    border-radius: 64px;
+}
+.landing #top-section .hero .left-hero .left-hero-desc{
+    font-size: 18px;
+    line-height: 33px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+.landing #top-section .hero .left-hero .left-hero-actions .hire-a-talent{
+    padding: 24px;
+    border: 1px solid var(--landing-yellow);
+    border-radius: 40px;
+}
+.landing #top-section .hero .left-hero .left-hero-actions{
+    display: flex;
+    align-items: center;
+    gap:48px;
+    cursor: pointer;
+    color: var(--landing-yellow);
+    height: 72px;
+    margin-top: 56px;
+}
+.landing #top-section .hero .right-hero{
+    display: flex;
+    height: 80%;
+}
+.landing #top-section .hero .right-hero .hero-1{
+    background: url(../src/images/landing/landing-page-hero-1.png) no-repeat;
+    height: 100%;
+    width: 50%;
+}
+.landing #top-section .hero .right-hero .hero-2{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+.landing #top-section .hero .right-hero .hero-3{
+    background: url(../src/images/landing/landing-page-hero-2.png) no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.landing #top-section .hero .right-hero .hero-4{
+    background: url(../src/images/landing/landing-page-hero-3.png) no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.landing #brand-companies{
+    background-color: #214674;
+}
+.landing #brand-companies .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+}
+.landing #services{
+    background: #F3F7FC;
+}
+.landing #services .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.landing #services #services-header{
+    align-self: flex-start;
+}
+.landing #services #services-header .desc{
+    font-family: 'Sora', sans-serif;;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 33px;
+    color: #333333;
+}
+.landing #services #services-header .title{
+    font-family: 'Sora', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    letter-spacing: -0.03em;
+    color: #232347;
+}
+.landing #services .container{
+    display: flex;
+    padding: 80px 0;
+    flex-direction: column;
+    gap: 40px;
+
+}
+.landing #services #services-jobs{
+    width: 100%;
+
+}
+.landing #services #services-jobs .cards{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.landing #services #services-jobs .cards .card{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 31%;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px rgba(25, 54, 89, 0.1);
+    border-radius: 20px;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 16px;
+}
+
+.landing #services #services-jobs .cards .card .card-description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #333333;
+    font-family: 'Sora', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    margin-top: 5px;
+}
+
+.landing #services #services-jobs .cards .card .card-person-count{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #888888;
+}
+.landing #services #services-jobs .cards .card .card-person-count span{
+    width: 8px;
+    height: 8px;
+    background-color: var(--landing-yellow);
+    border-radius:50%;
+}
+.landing #services #services-freelancer{
+    width: 100%;
+}
+.landing #services #services-freelancer .cards{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.landing #services #services-freelancer .cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 16px;
+    gap: 20px;
+
+    width: 31%;
+    height: 260px;
+
+    background: #FFFFFF;
+    color: #333333;
+    box-shadow: 10px 10px 20px rgba(25, 54, 89, 0.1);
+    border-radius: 20px;
+}
+
+.landing #services #services-freelancer .cards .card .freelancer-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 10px;
+}
+
+
+.landing #services #services-freelancer .cards .card .freelancer-header .freelancer-logo img{
+    width: 56px;
+    height: 56px;
+    border-radius: 40px;
+}
+.landing #services #services-freelancer .cards .card .freelancer-header .freelancer-name{
+    font-family: 'Sora', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;
+}
+.landing #services #services-freelancer .cards .card .freelancer-header .freelancer-info{
+    display: flex;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #888888;
+}
+.landing #services #services-freelancer .cards .card .freelancer-header .freelancer-info span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.landing #services #services-freelancer .cards .card .freelancer-body{
+    display: flex;
+    flex-direction: column;
+}
+.landing #services #services-freelancer .cards .card .freelancer-body .freelancer-job-title{
+    font-family: 'Sora', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #333333;
+}
+.landing #services #services-freelancer .cards .card .freelancer-body .freelancer-job-title span{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #888888;
+}
+.landing #services #services-freelancer .cards .card .freelancer-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.landing #services #services-freelancer .cards .card .freelancer-footer .freelancer-pay{
+    font-family: 'Sora', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #888888;
+}
+.landing #services #services-freelancer .cards .card .freelancer-footer .freelancer-pay span{
+    font-family: 'Sora', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #214674;
+}
+.landing #services #services-freelancer .cards .card .freelancer-footer .freelancer-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 10px;
+
+    width: 120px;
+    height: 48px;
+
+    background: #214674;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.landing #services #services-freelancer .cards .card .freelancer-footer .freelancer-button span{
+    font-family: 'Sora', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+.landing #services #all-jobs,#all-freelancer{
+    font-family: 'Sora',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #214674;
+    cursor: pointer;
+}
+

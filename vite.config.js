@@ -5,7 +5,7 @@ import {resolve} from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/crowd-source-client-side-v1/',
+    // base: '/crowd-source-client-side-v1/',
     plugins: [react()],
     resolve:{
         alias: {

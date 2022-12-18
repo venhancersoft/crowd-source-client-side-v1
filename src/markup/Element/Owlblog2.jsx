@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import Slider from 'react-slick';
 import pic1 from '@/images/blog/grid/pic1.jpg'
 import pic2 from '@/images/blog/grid/pic2.jpg'
 import pic3 from '@/images/blog/grid/pic3.jpg'
@@ -63,7 +62,7 @@ class Latestblogowl extends Component {
         };
         return (
 
-            <Slider
+            <div
                 className="blog-carousel owl-carousel owl-btn-center-lr owl-btn-3 owl-theme owl-btn-center-lr owl-btn-1 " {...settings}>
                 {latestBlog.map((item, index) => (
                     <div className="item p-3" key={index}>
@@ -96,7 +95,7 @@ class Latestblogowl extends Component {
                     </div>
                 ))}
 
-            </Slider>
+            </div>
 
 
         )

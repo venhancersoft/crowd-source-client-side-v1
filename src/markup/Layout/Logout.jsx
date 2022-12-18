@@ -1,32 +1,20 @@
 import React from 'react';
-import {connect, useDispatch} from 'react-redux';
-import {Link, withRouter} from 'react-router-dom';
+import {useStore} from '@/store/store';
 
-import {logout} from '@/store/actions/AuthActions';
-import {isAuthenticated} from '@/store/selectors/AuthSelectors';
-
-function LogoutPage(props) {
-    const dispatch = useDispatch();
+function LogoutPage() {
+    const setStoreState = useStore(state => state.setStoreState);
 
     function onLogout() {
-        dispatch(logout(props.history));
-        // window.location.reload();
+        setStoreState({auth: null})
     }
 
     return (
         <>
-
-            <Link to={'#'} title="READ MORE" className="site-button" onClick={onLogout}>
-                <i className="fa fa-lock"></i> Logout
-            </Link>
+            <button title="READ MORE" className="site-button" onClick={onLogout}>
+                <i className="fa fa-lock"></i> Çıkış Yap
+            </button>
         </>
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        isAuthenticated: isAuthenticated(state),
-    };
-};
-
-export default withRouter(connect(mapStateToProps)(LogoutPage));
+export default LogoutPage

@@ -36,7 +36,6 @@ class Jobfindbox extends Component {
             <div className="section-full browse-job-find">
                 <div className="container">
                     <div className="find-job-bx">
-                        <form className="dezPlaceAni">
                             <div className="row">
                                 <div className="col-lg-4 col-md-6">
                                     <div className="form-group">
@@ -83,7 +82,7 @@ class Jobfindbox extends Component {
                                     <button type="submit" className="site-button btn-block">Find Job</button>
                                 </div>
                             </div>
-                        </form>
+                        
                     </div>
                 </div>
             </div>

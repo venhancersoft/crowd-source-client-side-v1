@@ -252,7 +252,7 @@ class Header2 extends Component {
                                 </div>
                                 <div className="col-lg-6 col-md-6 p-a0">
                                     <div className="lead-form browse-job text-left">
-                                        <form>
+                                        
                                             <h3 className="m-t0">Personal Details</h3>
                                             <div className="form-group">
                                                 <input value="" className="form-control" placeholder="Name"/>
@@ -265,7 +265,7 @@ class Header2 extends Component {
                                                         className="btn-primary site-button btn-block">Submit
                                                 </button>
                                             </div>
-                                        </form>
+                                        
                                     </div>
                                 </div>
                             </div>

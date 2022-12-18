@@ -33,7 +33,7 @@ class Jobsearchform extends Component {
         return (
 
             <div className="job-search-form">
-                <form>
+                
                     <div className="input-group">
                         <input type="text" className="form-control" placeholder="Job Title, Keywords Or Company Name"/>
                         <input type="text" className="form-control" placeholder="City, Province Or Region"/>
@@ -41,7 +41,7 @@ class Jobsearchform extends Component {
                             <button className="site-button">Search</button>
                         </div>
                     </div>
-                </form>
+                
             </div>
         )
     }

@@ -1,89 +1,68 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
-import Header2 from '@/markup/Layout/Header';
-import Footer from '@/markup/Layout/Footer';
-import {Form} from 'react-bootstrap';
-import GoogleMaps from 'simple-react-google-maps';
+import React from 'react';
+import AuthLayout from '@/markup/Layout/AuthLayout';
+import {Button, FloatingLabel, Form} from 'react-bootstrap';
 
-import icon3 from '@/images/logo/icon3.jpg'
-import ProfileIKSidebar from '@/markup/Element/ProfileIKSidebar';
-import DatePicker from 'react-datepicker';
-
-function Companyprofile() {
-    const [startDate, setStartDate] = useState(new Date());
+function CrowdIkIsYayinlama() {
     return (
-        <>
-            <Header2/>
-            <div className="page-content bg-white">
-                <div className="content-block">
-                    <div className="section-full bg-white p-t50 p-b20">
-                        <div className="container">
-                            <div className="row">
-                                <ProfileIKSidebar />
-                                <div className="col-xl-9 col-lg-8 m-b30">
-                                    <div className="job-bx submit-resume">
-                                        <div className="job-bx-title clearfix">
-                                            <h4 className="font-weight-700 pull-left text-uppercase">İş Yayınlama</h4>
-                                        </div>
-                                        <div className="col-lg-12 col-md-12">
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label>Sektör</label>
-                                                    <Form.Control as="select" custom className="select-btn">
-                                                        <option>Sektör Seçiniz</option>
-                                                        <option>Construction</option>
-                                                        <option>Corodinator</option>
-                                                        <option>Employer</option>
-                                                        <option>Financial Career</option>
-                                                        <option>Information Technology</option>
-                                                        <option>Marketing</option>
-                                                        <option>Quality check</option>
-                                                        <option>Real Estate</option>
-                                                        <option>Sales</option>
-                                                        <option>Supporting</option>
-                                                        <option>Teaching</option>
-                                                    </Form.Control>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label>işin Adı</label>
-                                                    <input type="text" className="form-control" />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label>İşin Tanımı:</label>
-                                                    <textarea className="form-control" />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label>Saatlik Ücret:</label>
-                                                    <input type="text" className="form-control" />
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="form-group">
-                                                    <label>İşin Son Tarihi:</label>
-                                                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-                                                </div>
-                                            </div>
-                                            <button className="site-button m-b30">Yayınla</button>
-                                        </div>
+        <AuthLayout>
+            <h3>İş Yayınlama</h3>
+            <Form>
+                <Form.Group className="mb-3">
+                    <Form.Label>İşin Başlığı</Form.Label>
+                    <input placeholder="İşin Başlığı" type="text" className="form-control" name="title"/>
+                </Form.Group>
+                <Form.Group className={'mb-3'}>
+                    <Form.Label>İşin Açıklaması</Form.Label>
+                    <FloatingLabel controlId="floatingTextarea2" label="İşin Açıklaması">
+                        <Form.Control
+                            as="textarea"
+                            placeholder="İşin Açıklaması"
+                            style={{ height: '100px' }}
+                        />
+                    </FloatingLabel>
+                </Form.Group>
 
-                                    </div>
+                <Form.Group className={'mb-3'}>
+                    <Form.Label>Kategori</Form.Label>
+                    <Form.Select aria-label="Kategori Seçiniz">
+                        <option>Kategori Seçiniz</option>
+                        <option value="Grafik Tasarım">Grafik Tasarım</option>
+                        <option value="Yazılım Teknoloji">Yazılım Teknoloji</option>
+                    </Form.Select>
+                </Form.Group>
 
-                                </div>
-                            </div>
+                <Form.Group className={'mb-3'}>
+                    <Form.Label>Alt Kategori</Form.Label>
+                    <Form.Select aria-label="Alt Kategori Seçiniz">
+                        <option>Alt Kategori Seçiniz</option>
+                        <option value="Logo Tasarımı">Logo Tasarımı</option>
+                        <option value="3D tasarımı">3D tasarımı</option>
+                    </Form.Select>
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    <Form.Label>Tahmini Bütçe</Form.Label>
+                    <input placeholder="Tahmini Bütçe" type="text" className="form-control" name="butce" />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    <Form.Label>Teslim Süresi</Form.Label>
+                    {['Birkaç gün içinde','Bir hafta İçinde', 'Bir ay içinde', '1-3 ay içinde', '3 aydan fazla'].map((type) => (
+                        <div key={'radio'+type} className="mb-1">
+                            <Form.Check type={'radio'}>
+                                <Form.Check.Input type={'radio'} name="group1" isValid />
+                                <Form.Check.Label>{type}</Form.Check.Label>
+                            </Form.Check>
                         </div>
-                    </div>
+                    ))}
+                </Form.Group>
 
-                </div>
-            </div>
-            <Footer/>
-        </>
+                <Button variant="primary" type="submit" onSubmit={(e) => e.preventDefault()}>
+                    İlan ver
+                </Button>
+            </Form>
+        </AuthLayout>
     )
 }
 
-export default Companyprofile;
+export default CrowdIkIsYayinlama;
