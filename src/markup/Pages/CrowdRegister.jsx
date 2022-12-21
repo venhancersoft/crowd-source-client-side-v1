@@ -4,7 +4,7 @@ import {createDefaultMaskGenerator, MaskedInput} from 'react-hook-mask';
 
 const maskGenerator = createDefaultMaskGenerator('+99 999 999 99 99');
 
-function CrowdRegister(props) {
+function CrowdRegister() {
     const [individualSelected, setIndividualSelected] = useState(true);
     let errorsObj = {};
     const [errors, setErrors] = useState(errorsObj);
@@ -15,7 +15,7 @@ function CrowdRegister(props) {
         surname: '',
         userName: '',
         userType: 0,
-        phoneNumber: '+90 5',
+        phoneNumber: '',
         password: '',
         email: ''
     })
@@ -107,8 +107,8 @@ function CrowdRegister(props) {
                                             </button>
                                         </div>
 
-                                            <h3 className="form-title m-t0">Personal Information</h3>
-                                            <p>Enter your e-mail address and your password. </p>
+                                            <h3 className="form-title m-t0">Kişisel Bilgiler</h3>
+                                            <p>Email Adresini ve Şifreyi giriniz</p>
                                             <div className="form-group">
                                                 <label className="font-weight-700">İsim *</label>
                                                 <input autoComplete="off" name="dzName" value={form.name}
@@ -189,7 +189,7 @@ function CrowdRegister(props) {
                                             </div>
                                             <div className="form-group text-left">
                                                 <button type="submit" onSubmit={onSignUp}
-                                                        className="site-button dz-xs-flex m-r5">Sign me up
+                                                        className="site-button dz-xs-flex m-r5">Üye Ol
                                                 </button>
                                             </div>
                                         

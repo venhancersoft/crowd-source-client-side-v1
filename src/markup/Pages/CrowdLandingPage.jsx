@@ -8,6 +8,7 @@ import Android from '@/images/landing/android.png'
 import IOS from '@/images/landing/ios.png'
 import WorkFlow from '@/images/landing/workflow.png'
 import gencay from '@/images/team/gencay.jpg';
+import {Link} from 'react-router-dom';
 
 function LandingPage() {
     // const auth = useStore(state => state.auth);
@@ -27,7 +28,9 @@ function LandingPage() {
                             </div>
                         </div>
                         <div className="right-header">
-                            <div>Giriş Yap</div>
+                            <Link to={'/login'}>
+                                <div>Giriş Yap</div>
+                            </Link>
                             <div className="get-started">Hadi Başlayalım</div>
                         </div>
                     </div>
